@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: product-service
-        image: muthu2699/product-service:latest
+        image: muthu2699/product-service:24
         ports:
         - containerPort: 8081
         env:
