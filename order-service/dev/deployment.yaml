@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: order-service
-        image: muthu2699/order-service:latest
+        image: muthu2699/order-service:25
         imagePullPolicy: Always
         ports:
         - containerPort: 8082
