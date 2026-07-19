@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: product-service
-  namespace: dev
+  namespace: prod
 spec:
   replicas: 1
   selector:
@@ -20,13 +20,13 @@ spec:
         - containerPort: 8081
         env:
         - name: SPRING_PROFILES_ACTIVE
-          value: "qa"
+          value: "prod"
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: product-service
-  namespace: qa
+  namespace: prod
 spec:
   selector:
     app: product-service
